@@ -1,0 +1,12 @@
+.nav-item-custome{
+    padding-left: 20px;
+}
+.navbar-custome{
+    padding-left: 300px;
+}
+a{
+    color :white!important;
+}
+.active a{
+    color:#9c3!important;
+}

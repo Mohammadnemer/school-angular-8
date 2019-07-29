@@ -1,0 +1,11 @@
+.card{
+    width: 22rem;
+    align-items: center;
+    padding: 10px;
+    border-top: 12px #343a40 solid;
+    box-shadow: -5px 12px 26px rgba(0, 0, 0, 0.2), 12px 0px 12px rgba(0, 0, 0, 0.14), 4px 4px 4px rgba(0, 0, 0, 0.12);
+}
+.fas{
+    font-size: 60px;
+    color: #9c3;
+}

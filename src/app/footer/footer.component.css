@@ -1,0 +1,12 @@
+.container-fluid{
+    position: fixed;
+    bottom: 0;
+    color: white;
+    text-align: center;
+    height: 40px;
+    margin-top: 100px;
+}
+.col-12{
+    position: relative;
+    top: 5px;
+}
