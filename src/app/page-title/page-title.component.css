@@ -1,0 +1,10 @@
+.box{
+    position: relative;
+    top: 50px;
+    border-left: 3px #9c3 solid;
+    padding: 1px;
+    margin-left: 40px;
+}
+.page-title{
+    padding-left: 3px;
+}

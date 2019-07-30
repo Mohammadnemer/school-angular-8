@@ -6,6 +6,10 @@
     box-shadow: -5px 12px 26px rgba(0, 0, 0, 0.2), 12px 0px 12px rgba(0, 0, 0, 0.14), 4px 4px 4px rgba(0, 0, 0, 0.12);
 }
 .fas{
-    font-size: 60px;
+    font-size: 50px;
     color: #9c3;
+}
+.card-text.title{
+    font-weight: 500;
+    padding-right: 10px;
 }

@@ -1,19 +1,17 @@
-<h1>
-    Welcome Dashboard
-</h1>
+<app-page-title [title]='"Dashboard"'></app-page-title>
 <div class='container-fluid'>
     <div class='row'>
         <div class='col-md-6 col-lg-4 col-sm-12 padding-right'>
-                <app-card-info [data]="aa"></app-card-info>
+                <app-card-info [cardTitle]='"Username"' [cardInfo]='"Mohammad Nemer"' [cardImg]='"fas fa-id-card-alt"'></app-card-info>
         </div>
         <div class='col-md-6 col-lg-4 col-sm-12 padding-right'>
-                <app-card-info [data]="aa"></app-card-info>
+                <app-card-info [cardTitle]='"Email"'    [cardInfo]='"mohammad@gmail.com"'    [cardImg]='"fas fa-envelope"'></app-card-info>
         </div>
         <div class='col-md-6 col-lg-4 col-sm-12 padding-right'>
-                <app-card-info [data]="aa"></app-card-info>
+                <app-card-info [cardTitle]='"Phone"'    [cardInfo]='"0788795344"'    [cardImg]='"fas fa-mobile-alt"'></app-card-info>
         </div>
         <div class='col-md-6 col-lg-4 col-sm-12 padding-right'>
-                <app-card-info [data]="aa"></app-card-info>
+                <app-card-info [cardTitle]='"Address"'  [cardInfo]='"Amman - Marka"'  [cardImg]='"fas fa-map-marker-alt"'></app-card-info>
         </div>
     </div>
     

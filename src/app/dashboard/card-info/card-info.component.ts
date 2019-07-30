@@ -6,7 +6,9 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./card-info.component.css']
 })
 export class CardInfoComponent implements OnInit {
-  @Input() data;
+  @Input() cardTitle;
+  @Input() cardInfo;
+  @Input() cardImg;
   constructor() { }
 
   ngOnInit() {
