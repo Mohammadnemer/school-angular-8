@@ -1,1 +1,28 @@
-<app-page-title [title]='"Teacher"'></app-page-title>
+<div class="container-fluid">
+    <div class='row'>
+        <div class='col-3'>
+                <app-page-title [title]='"Teacher"'></app-page-title>
+        </div>
+    </div>
+    <div class='row'>
+            <div class='col-12'>
+                <app-grid></app-grid>
+            </div>
+    </div>
+    <jw-modal id="custom-modal-1">
+            <h1>A Custom Angular 7 Modal!</h1>
+            <button (click)="closeModal('custom-modal-1');">Close</button>
+    </jw-modal>
+    <jw-modal id="custom-modal-2">
+            <h1>Hi Yaghi</h1>
+            <button (click)="closeModal('custom-modal-2');">Close</button>
+    </jw-modal>
+    <div>
+            <h1>Home</h1>
+            <p>{{bodyText}}</p>
+            <button (click)="openModal('custom-modal-1')">Open Modal 1</button>
+            <button (click)="openModal('custom-modal-2')">Open Modal 2</button>
+        </div>
+</div>
+
+

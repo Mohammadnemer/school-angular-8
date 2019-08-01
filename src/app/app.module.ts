@@ -13,9 +13,13 @@ import { ParentComponent } from './parent/parent.component';
 import { StudentComponent } from './student/student.component';
 import { AdminComponent } from './admin/admin.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { GridComponent } from './shared/component/grid/grid.component';
+import { FormGridComponent } from './shared/component/form-grid/form-grid.component';
+import { ModalComponent } from './shared/component/modal/modal.component';
 @NgModule({
   declarations: [
-    AppComponent,Header, FooterComponent, CardInfoComponent,Dashboard,CardInfoComponent, PageTitleComponent, TeacherComponent, ParentComponent, StudentComponent, AdminComponent, PageNotFoundComponent
+    AppComponent,Header, FooterComponent, CardInfoComponent,Dashboard,CardInfoComponent, PageTitleComponent, 
+    TeacherComponent, ParentComponent, StudentComponent, AdminComponent, PageNotFoundComponent, GridComponent, FormGridComponent, ModalComponent
   ],
   imports: [
     BrowserModule,RouterAppModule,RouterModule
