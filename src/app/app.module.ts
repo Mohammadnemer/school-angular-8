@@ -1,28 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule,Routes } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { Header } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { CardInfoComponent } from './dashboard/card-info/card-info.component'
-import { Dashboard } from './dashboard/dashboard.component';
-import { PageTitleComponent } from './page-title/page-title.component';
+import { Header } from './Component/header/header.component';
+import { FooterComponent } from './Component/footer/footer.component';
+import { CardInfoComponent } from './Component/dashboard/card-info/card-info.component'
+import { Dashboard } from './Component/dashboard/dashboard.component';
+import { PageTitleComponent } from './shared/component/page-title/page-title.component';
 import { RouterAppModule } from './router/router.module';
-import { TeacherComponent } from './teacher/teacher.component';
-import { ParentComponent } from './parent/parent.component';
-import { StudentComponent } from './student/student.component';
-import { AdminComponent } from './admin/admin.component';
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { TeacherComponent } from './Component/teacher/teacher.component';
+import { ParentComponent } from './Component/parent/parent.component';
+import { StudentComponent } from './Component/student/student.component';
+import { AdminComponent } from './Component/admin/admin.component';
+import { PageNotFoundComponent } from './shared/component/page-not-found/page-not-found.component';
 import { GridComponent } from './shared/component/grid/grid.component';
-import { FormGridComponent } from './shared/component/form-grid/form-grid.component';
+import { HttpClientModule } from '@angular/common/http';
 import { ModalComponent } from './shared/component/modal/modal.component';
+
 @NgModule({
   declarations: [
     AppComponent,Header, FooterComponent, CardInfoComponent,Dashboard,CardInfoComponent, PageTitleComponent, 
-    TeacherComponent, ParentComponent, StudentComponent, AdminComponent, PageNotFoundComponent, GridComponent, FormGridComponent, ModalComponent
+    TeacherComponent, ParentComponent, StudentComponent, AdminComponent, PageNotFoundComponent, GridComponent, ModalComponent
+
   ],
   imports: [
-    BrowserModule,RouterAppModule,RouterModule
+    BrowserModule,RouterAppModule,RouterModule,HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

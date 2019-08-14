@@ -4,31 +4,30 @@
     <th>Name</th>
     <th>Email</th>
     <th>Phone</th>
-    <th>Age</th>
+    <th>Address</th>
     <th>Action</th>
   </tr>
 </thead>
 <tbody>
-    <tr>
-        <td>Mohammad</td>
-        <td>Mohammad@ccc.com</td>
-        <td>0788795344</td>
-        <td>23</td>
+    <tr *ngFor="let admin of config;">
+        <td>{{admin.username}}</td>
+        <td>{{admin.email}}</td>
+        <td>{{admin.phone}}</td>
+        <td>{{admin.address}}</td>
         <td>
           <button class='btn btn-outline-danger btn-sm'><i class='fas fa-trash'></i> Remove</button>
           <button class='btn btn-outline-primary btn-sm'><i class='fas fa-pen'></i> Update</button>
         </td>
       </tr>
-      <tr>
-          <td>Mohammad</td>
-          <td>Mohammad@ccc.com</td>
-          <td>0788795344</td>
-          <td>23</td>
-          <td>
-              <button class='btn btn-outline-danger btn-sm'><i class='fas fa-trash'></i> Remove</button>
-              <button class='btn btn-outline-primary btn-sm'><i class='fas fa-pen'></i> Update</button>
-            </td>
-        </tr>
 </tbody>
 </table>
-<button class='btn btn-outline-success btn'><i class='fas fa-user'></i> Add Teacher</button>
+<jw-modal id="custom-modal-1">
+  <h1>A Custom Angular 7 Modal!</h1>
+  <button (click)="closeModal('custom-modal-1');">Close</button>
+</jw-modal>
+<jw-modal id="custom-modal-2">
+  <h1>Hi Yaghi</h1>
+  <input type="text">
+  <button (click)="closeModal('custom-modal-2');">Close</button>
+</jw-modal>
+<button class='btn btn-outline-success btn' (click)="openModal('custom-modal-2')"><i class='fas fa-user'></i> Add Teacher</button>
