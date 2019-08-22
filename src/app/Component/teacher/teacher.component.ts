@@ -12,11 +12,4 @@ export class TeacherComponent implements OnInit {
 
   ngOnInit() {
   }
-  openModal(id: string) {
-    this.modalService.open(id);
-}
-
-closeModal(id: string) {
-    this.modalService.close(id);
-}
 }

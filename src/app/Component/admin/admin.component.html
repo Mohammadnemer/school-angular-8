@@ -4,9 +4,9 @@
       <app-page-title [title]='"Admin"'></app-page-title>
     </div>
   </div>
-  <div class='row'>
+  <div class='container-fluid'>
     <div class='col-12'>
-      <app-grid [config]="config"></app-grid>
+      <app-grid [configGrid]="configGrid" (actionFunctions)="genericFunctions($event)"></app-grid>
     </div>
   </div>
 </div>

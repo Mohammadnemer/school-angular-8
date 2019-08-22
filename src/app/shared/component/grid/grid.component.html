@@ -1,33 +1,30 @@
 <table class='table table-bordered table-sm'>
-<thead class="thead-dark ">
-  <tr>
-    <th>Name</th>
-    <th>Email</th>
-    <th>Phone</th>
-    <th>Address</th>
-    <th>Action</th>
-  </tr>
-</thead>
-<tbody>
-    <tr *ngFor="let admin of config;">
-        <td>{{admin.username}}</td>
-        <td>{{admin.email}}</td>
-        <td>{{admin.phone}}</td>
-        <td>{{admin.address}}</td>
-        <td>
-          <button class='btn btn-outline-danger btn-sm'><i class='fas fa-trash'></i> Remove</button>
-          <button class='btn btn-outline-primary btn-sm'><i class='fas fa-pen'></i> Update</button>
-        </td>
-      </tr>
-</tbody>
+  <thead class="thead-dark ">
+    <tr>
+      <ng-container *ngFor="let column of configGrid.columns;">
+        <th>{{column.label}}</th>
+      </ng-container>
+      <th style="width:  15%">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let columnData of configGrid.data;">
+      <ng-container *ngFor="let column of configGrid.columns;">
+        <td>{{columnData[column.id]}}</td>
+      </ng-container>
+      <td>
+        <button class='btn btn-outline-danger btn-sm' (click)="openModal(configGrid.action[1].id,columnData)"><i class='fas fa-trash'></i>
+          {{configGrid.action[1].label}}</button>
+        <button class='btn btn-outline-primary btn-sm' (click)="openModal(configGrid.action[2].id,columnData)"><i class='fas fa-pen'></i>
+          {{configGrid.action[2].label}}</button>
+      </td>
+    </tr>
+  </tbody>
 </table>
-<jw-modal id="custom-modal-1">
-  <h1>A Custom Angular 7 Modal!</h1>
-  <button (click)="closeModal('custom-modal-1');">Close</button>
-</jw-modal>
-<jw-modal id="custom-modal-2">
-  <h1>Hi Yaghi</h1>
-  <input type="text">
-  <button (click)="closeModal('custom-modal-2');">Close</button>
-</jw-modal>
-<button class='btn btn-outline-success btn' (click)="openModal('custom-modal-2')"><i class='fas fa-user'></i> Add Teacher</button>
+
+<ng-container *ngFor="let action of configGrid.action">
+  <app-modal [id]="action.id" [configModal]="action" (actionFunction)="genericFunction($event)"></app-modal>
+</ng-container>
+
+<button class='btn btn-outline-success btn' (click)="openModal(configGrid.action[0].id,null)"><i
+    class='fas fa-user'></i> {{configGrid.action[0].label}}</button>

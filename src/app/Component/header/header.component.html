@@ -5,7 +5,7 @@
         <div class="collapse navbar-collapse navbar-custome" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto ">
                   <li class="nav-item  nav-item-custome" routerLinkActive="active">
-                    <a class="nav-link" routerLink="/home" >Home</a>
+                    <a class="nav-link" routerLink="/home" >{{'HOME' | translate }}</a>
                   </li>
                   <li class="nav-item nav-item-custome" routerLinkActive="active">
                     <a class="nav-link" routerLink="/teacher" routerLinkActive="active">Teacher</a>
@@ -24,6 +24,8 @@
                   <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Logout</button>
                 </form>
         </div>
+        <div (click)="translate.use('en')" style="color: red"><i class="fas fa-flag-usa"></i></div>
+        <button (click)="translate.use('fr')" style="color: red"><i class="fas fa-flag"></i></button>
     </div>
     </nav>
 </header>

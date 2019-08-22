@@ -1,0 +1,132 @@
+{
+    "action":[
+        {
+          "id": "addAdmin",
+          "label": "Add Admin",
+          "fields": [{
+            "type": "text",
+            "label": "Username",
+            "id":"username",
+            "value":null,
+            "required":true
+          },
+          {
+            "type": "email",
+            "label": "Email",
+            "id":"email",
+            "value":null,
+            "required":true
+          }, {
+            "type": "text",
+            "label": "Phone",
+            "id":"phone",
+            "value":null,
+            "required":true,
+            "pattern":"^([0-9]{10})$"
+          }, {
+            "type": "text",
+            "label": "First Name",
+            "id":"firstName",
+            "value":null,
+            "required":true
+          }, {
+            "type": "text",
+            "label": "Last Name",
+            "id":"lastName",
+            "value":null,
+            "required":true
+          }, {
+            "type": "text",
+            "label": "Address",
+            "id":"address",
+            "value":null,
+            "required":false,
+            "pattern":"^([0-9]{10})$"
+          }],
+          "title": "Add Admin",
+          "functionName":"createAdmin",
+          "btnSave":"Submit"
+        },
+        {
+          "id": "removeAdmin",
+          "label": "Remove",
+          "fields":[],
+          "message":"Are you sure remove this admin?",
+          "title": "Remove Admin",
+          "functionName":"deleteAdmin",
+          "btnSave":"Save"
+        },
+        {
+          "id": "updateAdmin",
+          "label": "Update",
+          "fields": [{
+            "type": "text",
+            "label": "Username",
+            "id":"username",
+            "value":null,
+            "required":true
+          },
+          {
+            "type": "email",
+            "label": "Email",
+            "id":"email",
+            "value":null,
+            "required":true
+          }, {
+            "type": "text",
+            "label": "Phone",
+            "id":"phone",
+            "value":null,
+            "required":true,
+            "pattern":"^([0-9]{10})$"
+          }, {
+            "type": "text",
+            "label": "First Name",
+            "id":"firstName",
+            "value":null,
+            "required":true
+          }, {
+            "type": "text",
+            "label": "Last Name",
+            "id":"lastName",
+            "value":null,
+            "required":true
+          }, {
+            "type": "text",
+            "label": "Address",
+            "id":"address",
+            "value":null,
+            "required":false,
+            "pattern":"^([0-9]{10})$"
+          }],
+          "title": "Update Admin",
+          "functionName":"updateAdmin",
+          "btnSave":"Save"
+        }],
+    "columns":[
+      {
+        "id":"username",
+        "label":"Username"
+      },
+      {
+        "id":"email",
+        "label":"Email"
+      },
+      {
+        "id":"firstName",
+        "label":"First Name"
+      },
+      {
+        "id":"lastName",
+        "label":"Last Name"
+      },
+      {
+        "id":"phone",
+        "label":"Phone"
+      },
+      {
+        "id":"address",
+        "label":"Address"
+      }
+    ]
+}

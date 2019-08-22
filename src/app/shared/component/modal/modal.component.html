@@ -1,3 +1,37 @@
-<p>
-  modal works!
-</p>
+<div class="jw-modal modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog modal-lg" role="document">
+        <form class="modal-content" (ngSubmit)="save()" #form="ngForm">
+            <div class="modal-header">
+                <h5 class="modal-title">{{configModal.title}}</h5>
+                <button type="button" class="close" (click)="closeModal(configModal.id);" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row"><h6 class="modal-mssg">{{configModal.message}}</h6></div>
+                <div class="row">
+                <ng-container *appCreateModal="let field from configModal.fields;">
+                        <span class="col-sm-4 input-type">
+                            <label>{{field.label}} : </label><span *ngIf="field.required" class="invalid-star">*</span>
+                            <input [type]="field.type" 
+                                   class='form-control' 
+                                   [placeholder]="field.label" 
+                                   [ngModel]="field.value" 
+                                   [name]="field.id" 
+                                   [required]="field.required" 
+                                   [pattern]="field.pattern"
+                                   #fieldRef="ngModel">
+                            <span class="help-block invalid-mssg" *ngIf="!fieldRef.valid && fieldRef.touched && field.required && fieldRef.pristine">This information is requird</span>
+                            <span class="help-block invalid-mssg" *ngIf="!fieldRef.valid && fieldRef.touched && !fieldRef.pristine" i18n="@@test">Invalid Pattern</span>
+                        </span>
+                </ng-container>
+            </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" (click)="closeModal(configModal.id);">Close</button>
+                <button type="button" class="btn btn-primary" type="submit">{{configModal.btnSave}}</button>
+            </div>
+        </form>
+    </div>
+</div>
+<div class="jw-modal-background"></div>

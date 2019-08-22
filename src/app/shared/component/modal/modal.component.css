@@ -1,0 +1,18 @@
+.modal-body .input-type{
+    margin-top: 15px;
+}
+.modal-dialog{
+    margin: 13.75rem auto;
+}
+.invalid-star{
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+}
+.invalid-mssg{
+    color: red;
+    font-size: 12px;
+}
+.modal-mssg{
+    margin-left: 25px;
+}

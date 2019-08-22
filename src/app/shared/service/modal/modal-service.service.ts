@@ -11,9 +11,9 @@ export class ModalServiceService {
   remove(id: string){
     this.modals = this.modals.filter(x => x.id === id);
   }
-  open(id: string){
+  open(id: string , data:any){
     let modal: any = this.modals.filter(x => x.id === id)[0];
-    modal.open();
+    modal.open(data);
   }
   close(id: string){
     let modal: any = this.modals.filter(x => x.id === id)[0];
