@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { RestAdminService } from 'src/app/shared/service/modal/rest-api/rest-admin.service';
-import { HttpBackend, HttpParams } from '@angular/common/http';
 
 @Component({
   selector: 'app-admin',
