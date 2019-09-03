@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http'
+import { HttpClient, HttpHeaders } from '@angular/common/http'
 @Injectable({
   providedIn: 'root'
 })
 export class RestAdminService {
-
+  
   constructor(private http:HttpClient) { }
+  
   findAll(){
     return this.http.get('http://localhost:8080/api/admins');
   }
@@ -20,5 +21,9 @@ export class RestAdminService {
   }
   updateAdmin(req,id){
     return this.http.put(`http://localhost:8080/api/admins/${id}`,req);
+  }
+  validLogin(username,password){
+    const headers = new HttpHeaders({ Authorization: 'Basic ' + btoa(username + ':' + password) });
+    return this.http.get(`http://localhost:8080/api/validateLogin`,{headers});
   }
 }

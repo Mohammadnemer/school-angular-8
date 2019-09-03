@@ -20,9 +20,17 @@ export class LoginPageComponent implements OnInit {
   ngOnInit() {
   }
   login(){
-    if(this.authLogin.authenticate(this.fields['username']['value'],this.fields['password']['value'])){
-      this.router.navigate(['/pages'])
-    }
+    this.authLogin.authenticate(this.fields['username']['value'],this.fields['password']['value']).subscribe(
+      data =>{
+        if(data == true)
+        this.router.navigate(['/pages'])
+      },
+      err =>{
+        console.log(err);
+      }
+    )
+      
+    
   }
   login2(){
     var req = {

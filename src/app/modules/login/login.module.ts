@@ -5,7 +5,6 @@ import { Routes, RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms'
 import { LoginPageComponent } from 'src/app/Component/login/login-page/login-page.component';
 import { MaterialModule } from '../material/material.module';
-import { AuthGurdService } from 'src/app/shared/service/auth-gurd/auth-gurd.service';
 const appRoutes: Routes =[
   {
     path:'',
